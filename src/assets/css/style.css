@@ -1,0 +1,1338 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    /* text-transform: capitalize; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/game-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.main{
+    display: none;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+/* ========================================================================================== WELCOME MODAL */
+.welcomeModalContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    margin: auto;
+    align-items: center;
+    /* display: none; */
+}
+
+.welcomeModal {
+    background-image: url("../images/Game-intro.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: initial;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 900px;
+    position: relative;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    align-items: center;
+}
+
+.howPlayVideo {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.learnToPlay,
+.startTheGame,
+.afterVideoStart {
+    position: absolute;
+    padding: 15px 20px;
+    text-align: center;
+    width: 230px;
+    background-color: white;
+    color: darkgoldenrod;
+    border-radius: 30px;
+    border: 2px solid darkgoldenrod;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.learnToPlay:hover,
+.startTheGame:hover,
+.afterVideoStart:hover {
+    background-color: darkgoldenrod;
+    color: white;
+    border-color: white;
+}
+
+.learnToPlay,
+.startTheGame {
+    top: 50%;
+}
+
+.afterVideoStart {
+    bottom: -90px;
+    display: none;
+}
+
+.languageSelection {
+    position: absolute;
+    z-index: 5;
+    width: 90px;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: tomato; */
+    flex-wrap: wrap;
+}
+
+.languageSelection img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 3px solid transparent;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.activeLanguage{
+    border: 3px solid darkgoldenrod !important;
+    transform: scale(1.3);
+}
+
+
+/* ==================================================================================================NEW GAME LAUNCH MODAL */
+.launchNewGameContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+}
+
+.launchNewGameForm {
+    height: 500px;
+    width: 900px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.launchNewGameForm h2 {
+    font-weight: 700;
+    font-size: 40px;
+    background-color: goldenrod;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 1px solid white;
+    transition: 0.5s;
+    cursor: default;
+    margin: 15px 0;
+}
+
+.newPlayerLuchSelect {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin: 10px 0;
+}
+
+.newPlayerLuchSelect p {
+    font-size: 35px;
+    margin: 0;
+}
+
+.newPlayerLuchSelect select {
+    font-size: 25px;
+}
+
+.launchNewGameContainer .LaunchTheGameBTN {
+    font-weight: 700;
+    font-size: 40px;
+    background-color: goldenrod;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 1px solid white;
+    transition: 0.5s;
+    margin: 15px 0;
+}
+
+.LaunchTheGameBTN:hover {
+    background-color: white;
+    border: 1px solid goldenrod;
+    color: goldenrod;
+    cursor: pointer;
+}
+
+
+
+
+/* ==================================================================================================PLAY AREA */
+.playArea {
+    background-color: rgba(184, 135, 11, 0.2);
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardsStore {
+    /* background-color: yellow; */
+    position: absolute;
+    height: 150px;
+    width: 450px;
+    left: 50%;
+    margin-left: -225px;
+    top: 50%;
+    margin-top: -75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardsStore img {
+    object-fit: contain;
+    height: 150px;
+    width: 150px;
+}
+
+.cardsStore img:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.cardsStore img:nth-child(2) {
+    transform: rotate(360deg);
+}
+
+.cardsStore img:nth-child(3) {
+    transform: rotate(315deg);
+}
+
+.cardsStore h1 {
+    margin-left: 50px;
+}
+
+.reservedCardsContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.reservedCardsContainer p {
+    margin: 0;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.reservedCardsIMGContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservedCardsIMGContainer img {
+    width: 150px;
+    height: 150px;
+    margin-left: -73px;
+    object-fit: contain;
+    left: 35vw;
+    top: 25vh;
+    opacity: 0;
+    position: relative;
+}
+
+
+.aiLeft-container,
+.aiTop-container,
+.aiRight-container,
+.user-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aiLeft-container img,
+.aiTop-container img,
+.aiRight-container img,
+.user-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 5px;
+    opacity: 0;
+}
+
+.aiLeft-container {
+    /* background-color: crimson; */
+    left: 0;
+    top: 50%;
+    margin-top: -105px;
+    width: 220px;
+}
+
+.aiTop-container {
+    /* background-color: darkblue; */
+    top: 0;
+    left: 50%;
+    margin-left: -105px;
+    height: 220px;
+}
+
+.aiRight-container {
+    /* background-color: darkgreen; */
+    right: 0;
+    top: 50%;
+    margin-top: -105px;
+    width: 220px;
+}
+
+.user-container {
+    bottom: 0;
+    left: 50%;
+    margin-left: -105px;
+    /* background-color: darkkhaki; */
+    transition: 0.5s;
+    height: 220px;
+}
+
+
+.aiLeft-container img {
+    transform: rotate(90deg);
+    position: relative;
+    left: 35vw;
+}
+
+.aiTop-container img {
+    transform: rotate(180deg);
+    position: relative;
+    top: 25vh;
+}
+
+.aiRight-container img {
+    transform: rotate(270deg);
+    position: relative;
+    right: 35vw;
+}
+
+.user-container img {
+    transform: rotate(360deg);
+    position: relative;
+    bottom: 25vh;
+}
+
+
+@keyframes fromCenterToLeft {
+    from {
+        transform: rotateZ(0);
+        left: 35vw;
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateZ(90deg);
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fromCenterToTop {
+    from {
+        transform: rotateZ(0);
+        top: 25vh;
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateZ(180deg);
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fromCenterToRight {
+    from {
+        transform: rotateZ(0);
+        right: 35vw;
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateZ(270deg);
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fromCenterToBottom {
+    from {
+        transform: rotateZ(0);
+        bottom: 25vh;
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateZ(360deg);
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fromCenterToTopLeft {
+    from {
+        transform: rotateZ(0);
+        left: 35vw;
+        top: 25vh;
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateZ(360deg);
+        left: 0;
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+.startYourTurn,
+.doYourAction {
+    position: absolute;
+    bottom: 50vh;
+    font-size: 25px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 15px 20px;
+    background-color: darkgoldenrod;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 30px;
+    display: none;
+}
+
+.startYourTurn:hover,
+.doYourAction:hover {
+    background-color: white;
+    color: darkgoldenrod;
+    border-color: darkgoldenrod;
+    transition: 0.5s;
+}
+
+/* .discardedCardsContainer img{
+    opacity: 1;
+    position: static;
+} */
+
+.user-1 .discardedCardsContainer {
+    margin-right: 260px;
+}
+
+.user-2 .discardedCardsContainer {
+    margin-bottom: 90px;
+}
+
+.user-3 .discardedCardsContainer {
+    margin-left: 260px;
+}
+
+.user .discardedCardsContainer {
+    margin-top: 15px;
+}
+
+.user-1 h1{
+    position: relative;
+    left: 20px;
+}
+
+.user-3 h1{
+    position: relative;
+    right: 20px;
+}
+
+.user-1 h3::after{
+    margin: 0;
+    position: relative;
+    bottom: 73px;
+    right: 28px;
+    font-size: 30px;
+}
+
+.user-2 h3::after{
+    font-size: 30px;
+}
+
+.user-3 h3::after{
+    margin: 0;
+    position: relative;
+    bottom: 72px;
+    right: 64px;
+    font-size: 30px;
+}
+
+.discardedCardsContainer {
+    width: 120px;
+    height: 100px;
+    position: relative;
+}
+
+.discardedCardsContainer img {
+    height: 130px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    opacity: 1;
+}
+
+
+
+
+
+/* ======================================================================= SHOW CARDS AND ALL CARDS MODAL */
+.ShowCardsText {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    padding: 15px 20px;
+    background-color: darkgoldenrod;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 30px;
+    display: none;
+}
+
+.ShowCardsText:hover {
+    background-color: white;
+    color: darkgoldenrod;
+    border-color: darkgoldenrod;
+    transition: 0.5s;
+}
+
+.cardsIntroImage {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+}
+
+.imageSelfShowCards {
+    background-image: url("../images/cards_layout.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 90vh;
+    width: 60vw;
+    margin: 5vh auto;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+}
+
+.closeIntroCards {
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    font-size: 30px;
+    background-color: darkgoldenrod;
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.closeIntroCards:hover {
+    background-color: white;
+    color: darkgoldenrod;
+    border-color: darkgoldenrod;
+}
+
+
+
+
+
+
+
+
+/* ======================================================================= DO YOUR ACTION MODAL AND CHOICES */
+.doYourActionModal {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+}
+
+.doYourActionContainer {
+    height: 500px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.doYourActionContainerText {
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    color: darkgoldenrod;
+    margin-bottom: 10px;
+}
+
+.doYourActionContainerImages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.doYourActionContainerImages img {
+    width: 35%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.doYourActionSelectAI {
+    height: 500px;
+    justify-content: center;
+    flex-direction: column;
+    width: 900px;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: white;
+}
+
+.selectUserText {
+    font-size: 40px;
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+.doActionGoBack,
+.actionSubmit {
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+    color: black;
+    border: none;
+    background-color: white;
+    outline: none;
+}
+
+.actionSubmit {
+    width: 100%;
+}
+
+.doActionGoBack:hover,
+.actionSubmit:hover {
+    color: darkgoldenrod;
+}
+
+.doYourActionSelectContainer,
+.doYourActionSelectUserContainer {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#doYourActionSelect,
+#doYourActionSelectPlayer {
+    padding: 10px;
+    font-size: 25px;
+    width: 200px;
+}
+
+.usersOrders {
+    margin: 20px;
+    font-size: 25px;
+    color: darkgoldenrod;
+}
+
+.usersOrders i:hover {
+    color: goldenrod;
+    cursor: pointer;
+}
+
+
+
+/* ============================================================================== PRELOADER */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100000;
+    background-image: url('../images/heartLoader.gif');
+    background-repeat: no-repeat;
+    background-color: rgb(221, 81, 82);
+    background-position: center;
+    /* display: none; */
+}
+
+.preloaderAIplay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100000;
+    background-image: url('../images/loadingTurn.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+
+
+
+/* ============================================================================== dashBoardModal */
+.dashBoardModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.dashBoardContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dashBoardContainer p {
+    font-size: 25px;
+}
+
+.dashBoardContainer p span:nth-child(2) {
+    font-weight: 35px;
+}
+
+.dashBoardContinue {
+    font-size: 25px;
+    padding: 15px 20px;
+    background-color: darkgoldenrod;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashBoardContinue:hover {
+    color: darkgoldenrod;
+    background-color: white;
+    border: 2px solid darkgoldenrod;
+}
+
+
+
+
+/* ========================================================================== Turn Number Shower */
+.turnNumModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.turnNumContainer {
+    font-size: 60px;
+}
+
+.turnNumContainer h2 {
+    color: white;
+}
+
+.turnNumContainer h2 span:last-child {
+    color: darkgoldenrod !important;
+}
+
+
+
+
+
+/* ======================================================================= RESPONSIVENESS*/
+
+
+/* ====================================== Game Launcher Card*/
+
+@media screen and (max-width: 434px) {
+    .launchNewGameForm {
+        height: 700px;
+    }
+
+    .newPlayerLuchSelect {
+        flex-direction: column;
+    }
+
+    .welcomeModal .learnToPlay {
+        top: 60%;
+    }
+
+    .welcomeModal .startTheGame {
+        top: 80%;
+    }
+}
+
+@media screen and (min-width: 435px) and (max-width: 1023px) {
+
+    .welcomeModal,
+    .launchNewGameForm {
+        width: 500px;
+    }
+
+    .welcomeModal .learnToPlay {
+        top: 60%;
+    }
+
+    .welcomeModal .startTheGame {
+        top: 80%;
+    }
+
+    .newPlayerLuchSelect {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    .welcomeModal,
+    .launchNewGameForm {
+        width: 700px;
+    }
+
+    .welcomeModal .learnToPlay {
+        left: 30px;
+    }
+
+    .welcomeModal .startTheGame {
+        right: 30px;
+    }
+
+    .learnToPlay,
+    .startTheGame,
+    .afterVideoStart {
+        width: 250px;
+        font-size: 24px;
+    }
+
+    .newPlayerLuchSelect {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1984px) {
+    .welcomeModal .learnToPlay {
+        left: 20px;
+    }
+
+    .welcomeModal .startTheGame {
+        right: 20px;
+    }
+
+    .learnToPlay,
+    .startTheGame,
+    .afterVideoStart {
+        width: 270px;
+        font-size: 28px;
+    }
+}
+
+
+@media screen and (min-width: 1985px) and (max-width: 2560px) {
+    .welcomeModal .learnToPlay {
+        left: 20px;
+    }
+
+    .welcomeModal .startTheGame {
+        right: 20px;
+    }
+
+    .learnToPlay,
+    .startTheGame,
+    .afterVideoStart {
+        width: 300px;
+        font-size: 28px;
+    }
+}
+
+
+/* ====================================== Gameplay Board*/
+@media screen and (max-width: 329px) {
+    .player {
+        transform: scale(0.4);
+    }
+
+    .user {
+        bottom: -70px;
+        right: -125px;
+        flex-wrap: nowrap;
+    }
+
+    .user-1 {
+        left: -70px;
+    }
+
+    .user-2 {
+        top: -70px;
+        flex-wrap: nowrap;
+    }
+
+    .user-3 {
+        right: -70px;
+    }
+
+    .cardsStore {
+        transform: scale(0.4);
+    }
+
+    .cardsStore h1 {
+        margin-left: 127px;
+    }
+
+    .cardsStore img {
+        display: none;
+    }
+
+    .startYourTurn,
+    .doYourAction {
+        transform: scale(0.4);
+    }
+
+    .ShowCardsText {
+        font-size: 9px;
+        top: 84px;
+        padding: 10px 15px;
+    }
+
+    .reservedCardsContainer {
+        transform: scale(0.4);
+        top: 0px;
+        left: -40px;
+    }
+
+    .reservedCardsContainer p {
+        position: relative;
+        top: -70px;
+    }
+
+    .reservedCardsIMGContainer {
+        margin-left: 60px;
+        flex-direction: column;
+    }
+
+    .reservedCardsIMGContainer img {
+        margin-top: -73px;
+    }
+}
+
+@media screen and (max-width: 592px){
+    .user-2 h3::after{
+        font-size: 30px;
+        position: relative;
+        top: 22px;
+        right: 215px;
+    }
+}
+
+@media screen and (min-width: 330px) and (max-width: 754px) {
+    .player {
+        transform: scale(0.55);
+    }
+
+    .user {
+        bottom: -55px;
+        right: -120px;
+        flex-wrap: nowrap;
+    }
+
+    .user-1 {
+        left: -55px;
+    }
+
+    .user-2 {
+        top: -55px;
+        flex-wrap: nowrap;
+    }
+
+    .user-3 {
+        right: -55px;
+    }
+
+    .cardsStore {
+        transform: scale(0.55);
+    }
+
+    .cardsStore h1 {
+        margin-left: 150px;
+    }
+
+    .cardsStore img {
+        display: none;
+    }
+
+    .startYourTurn,
+    .doYourAction {
+        transform: scale(0.55);
+    }
+
+    .ShowCardsText {
+        font-size: 9px;
+        padding: 10px 15px;
+        top: 120px;
+    }
+
+    .reservedCardsContainer {
+        transform: scale(0.55);
+        left: -30px;
+        top: 15px;
+    }
+
+    .reservedCardsContainer p {
+        position: relative;
+        top: -70px;
+    }
+
+    .reservedCardsIMGContainer {
+        margin-left: 60px;
+        flex-direction: column;
+    }
+
+    .reservedCardsIMGContainer img {
+        margin-top: -73px;
+    }
+}
+
+@media screen and (min-width: 755px) and (max-width: 1023px) {
+    .player {
+        transform: scale(0.7);
+    }
+
+    .user {
+        bottom: -40px;
+    }
+
+    .user-1 {
+        left: -40px;
+    }
+
+    .user-2 {
+        top: -40px;
+    }
+
+    .user-3 {
+        right: -40px;
+    }
+
+    .cardsStore {
+        transform: scale(0.7);
+    }
+
+    .startYourTurn,
+    .doYourAction {
+        transform: scale(0.7);
+    }
+
+    .ShowCardsText {
+        font-size: 11px;
+    }
+
+    .reservedCardsContainer {
+        transform: scale(0.75);
+        left: -15px;
+        top: 15px;
+    }
+
+    .reservedCardsContainer p {
+        position: relative;
+        top: -40px;
+    }
+
+    .reservedCardsIMGContainer {
+        margin-left: 60px;
+        margin-top: 28px;
+        flex-direction: column;
+    }
+
+    .reservedCardsIMGContainer img {
+        margin-top: -70px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1350px) {
+    .player {
+        transform: scale(0.8);
+    }
+
+    .user {
+        bottom: -30px;
+    }
+
+    .user-1 {
+        left: -30px;
+    }
+
+    .user-2 {
+        top: -30px;
+    }
+
+    .user-3 {
+        right: -30px;
+    }
+
+    .cardsStore {
+        transform: scale(0.8);
+    }
+
+    .startYourTurn,
+    .doYourAction {
+        transform: scale(0.9);
+    }
+
+    .ShowCardsText {
+        font-size: 15px;
+    }
+
+    .reservedCardsContainer {
+        transform: scale(0.8);
+        top: -10px;
+        left: -15px;
+    }
+
+    .reservedCardsIMGContainer {
+        margin-left: 60px;
+    }
+}
+
+@media screen and (min-width: 1349px) and (max-width: 1549px) {
+    .player {
+        transform: scale(0.93);
+    }
+
+    .user {
+        bottom: -18px;
+    }
+
+    .user-1 {
+        left: -1px;
+    }
+
+    .user-2 {
+        top: -17px;
+    }
+
+    .user-3 {
+        right: -17px;
+    }
+
+    .cardsStore {
+        transform: scale(1);
+    }
+
+    .startYourTurn,
+    .doYourAction {
+        transform: scale(0.9);
+    }
+
+    .ShowCardsText {
+        font-size: 20px;
+    }
+
+    .reservedCardsContainer {
+        transform: scale(1);
+        margin-left: 65px;
+    }
+
+    .reservedCardsContainer p {
+        margin-left: -43px;
+    }
+}
+
+@media screen and (min-width: 1550px) and (max-width: 1984px) {
+    .player {
+        transform: scale(1.2);
+    }
+
+    .user {
+        margin-bottom: 10px;
+    }
+
+    .user-1 {
+        margin-left: 8px;
+    }
+
+    .user-2 {
+        margin-top: 8px;
+    }
+
+    .user-3 {
+        margin-right: 8px;
+    }
+
+    .cardsStore {
+        transform: scale(1.3);
+    }
+
+    .startYourTurn,
+    .doYourAction {
+        transform: scale(1.3);
+    }
+
+    .ShowCardsText {
+        transform: scale(1.2);
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    .reservedCardsContainer {
+        margin-top: 30px;
+        margin-left: 30px;
+        transform: scale(1.3);
+    }
+
+    .reservedCardsIMGContainer {
+        margin-left: 85px;
+    }
+
+    .reservedCardsContainer p {
+        margin: 0;
+        margin-left: 35px;
+    }
+}
+
+
+@media screen and (min-width: 1985px) and (max-width: 2560px) {
+    .player {
+        transform: scale(1.45);
+    }
+
+    .user {
+        margin-bottom: 42px;
+    }
+
+    .user-1 {
+        margin-left: 40px;
+    }
+
+    .user-2 {
+        margin-top: 40px;
+    }
+
+    .user-3 {
+        margin-right: 40px;
+    }
+
+    .cardsStore {
+        transform: scale(1.5);
+    }
+
+    .startYourTurn,
+    .doYourAction {
+        transform: scale(1.5);
+    }
+
+    .ShowCardsText {
+        transform: scale(1.3);
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    .reservedCardsContainer {
+        margin-top: 50px;
+        margin-left: 87px;
+        transform: scale(1.4);
+    }
+
+    .reservedCardsIMGContainer {
+        margin-left: 45px;
+    }
+}
+
+/* ====================================== Select cards*/
+
+@media screen and (max-width: 950px) {
+
+    .doYourActionSelectAI,
+    .doYourActionContainer {
+        width: 100%;
+    }
+}

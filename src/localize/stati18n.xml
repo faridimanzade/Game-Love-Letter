@@ -1,0 +1,312 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<stati18n>
+
+	<host>
+		<name></name>
+	</host>
+
+    <file>
+        <name>stati18n</name>
+        <minified>false</minified>
+    </file>
+
+    <language>
+	
+		<text id='title'>
+            <translation lang='fr' fix='true'>Lettre d\'amour</translation>
+            <translation lang='en' fix='true'>Love letter</translation>
+            <translation lang='ru' fix='true' export='true'>Тайное послание</translation>
+            <translation lang='az' fix='true' export='true'>Sevgi məktubu</translation>
+        </text>
+
+        <text id='input'>
+            <translation lang='fr' fix='true'>Soumettre</translation>
+            <translation lang='en' fix='true'>Submit</translation>
+            <translation lang='ru' fix='true'>Утверждать</translation>
+            <translation lang='az' fix='true'>Təstiqlə</translation>
+        </text>
+		
+        <text id='hello-world' insertion='before'>
+            <translation lang='fr'>Démonstration de Stati18n</translation>
+            <translation lang='en'>Stati18n demonstration</translation>
+            <translation lang='ru'>Stati18n demostración</translation>
+            <translation lang='ru'>Stati18n demostración</translation>
+        </text>
+
+        <text id='message'>
+            <translation lang='fr'>Salut salut</translation>
+            <translation lang='en'>Hello hello</translation>
+            <translation lang='ru'>Hi hi</translation>
+            <translation lang='az'>Hi hi</translation>
+        </text>
+
+
+        <!-- INTRO MODAL-->
+        <text id='start-game'>
+            <translation lang='fr'>Commencez le jeu</translation>
+            <translation lang='en'>Start the game</translation>
+            <translation lang='ru'>Начать игру</translation>
+            <translation lang='az'>Oyuna başla</translation>
+        </text>
+
+        <text id='how-play'>
+            <translation lang='fr'>Comment jouer?</translation>
+            <translation lang='en'>How to play?</translation>
+            <translation lang='ru'>Как играть?</translation>
+            <translation lang='az'>Necə oynamalı?</translation>
+        </text>
+
+        <text id='create-game'>
+            <translation lang='fr'>Créer un nouveau jeu</translation>
+            <translation lang='en'>Create a new Game</translation>
+            <translation lang='ru'>Создать новую игру</translation>
+            <translation lang='az'>Yeni bir oyun yaradın</translation>
+        </text>
+        <!-- INTRO MODAL-->
+
+
+        <!-- SELECT GAME MODE MODAL -->
+        <text id='user-you'> <!-- Also in play zone -->
+            <translation lang='fr'>Vous</translation>
+            <translation lang='en'>You</translation>
+            <translation lang='ru'>Вы</translation>
+            <translation lang='az'>Siz</translation>
+        </text>
+
+        <text id='user-number-one'>  <!-- Also in play zone -->
+            <translation lang='fr'>Joueur Un</translation>
+            <translation lang='en'>Player One</translation>
+            <translation lang='ru'>Игрок Один</translation>
+            <translation lang='az'>Oyunçu Bir</translation>
+        </text>
+
+        <text id='user-number-two'>  <!-- Also in play zone -->
+            <translation lang='fr'>Joueur Deux</translation>
+            <translation lang='en'>Player Two</translation>
+            <translation lang='ru'>Игрок Два</translation>
+            <translation lang='az'>Oyunçu Iki</translation>
+        </text>
+
+        <text id='user-number-three'>  <!-- Also in play zone -->
+            <translation lang='fr'>Joueur Trois</translation>
+            <translation lang='en'>Player Three</translation>
+            <translation lang='ru'>Игрок Три</translation>
+            <translation lang='az'>Oyunçu Üç</translation>
+        </text>
+
+        <text id='user-number-four'>
+            <translation lang='fr'>Joueur Quatre</translation>
+            <translation lang='en'>Player Four</translation>
+            <translation lang='ru'>Игрок Четыре</translation>
+            <translation lang='az'>Oyunçu Dörd</translation>
+        </text>
+
+        <!-- <text id='select-level-computer-easy'>
+            <translation lang='fr'>Facile</translation>
+            <translation lang='en'>Easy</translation>
+            <translation lang='ru'>Лёгкий</translation>
+            <translation lang='az'>Asand</translation>
+        </text>
+
+        <text id='select-level-computer-medium'>
+            <translation lang='fr'>Moyen-à venir bientôt</translation>
+            <translation lang='en'>Medium-coming soon...</translation>
+            <translation lang='ru'>Средний-скоро...</translation>
+            <translation lang='az'>Orta-tezliklə...</translation>
+        </text>
+
+        <text id='select-level-computer-none'>
+            <translation lang='fr'>Nul</translation>
+            <translation lang='en'>None</translation>
+            <translation lang='ru'>Никакой</translation>
+            <translation lang='az'>Heç biri</translation>
+        </text> -->
+
+        <text id='launch-game'>
+            <translation lang='fr'>Lancer le jeu</translation>
+            <translation lang='en'>Launch the game</translation>
+            <translation lang='ru'>Запустить игру</translation>
+            <translation lang='az'>Oyunu yarat</translation>
+        </text>
+        <!-- SELECT GAME MODE MODAL -->
+
+        
+
+        <!-- DO YOUR ACTION MODAL -->
+        <text id='click-card-to-use'>
+            <translation lang='fr'>Cliquez sur la carte que vous souhaitez utiliser</translation>
+            <translation lang='en'>Click on the ard hat you want to use</translation>
+            <translation lang='ru'>Нажмите на карту, которую вы хотите использовать</translation>
+            <translation lang='az'>Oynamaq istədiyiniz kartı klikləyin</translation>
+        </text>
+
+        <text id='select-user-to-affect'>
+            <translation lang='fr'>Sélectionnez l'utilisateur que vous souhaitez affecter</translation>
+            <translation lang='en'>Select the user that you want to affect</translation>
+            <translation lang='ru'>Выберите пользователя, на которого вы хотите повлиять</translation>
+            <translation lang='az'>Təsir etmək istədiyiniz oyunçunu seçin</translation>
+        </text>
+
+        <text id='go-back-btn'>
+            <translation lang='fr'>Retourner</translation>
+            <translation lang='en'>Go Back</translation>
+            <translation lang='ru'>Вернуться назад</translation>
+            <translation lang='az'>Geri dön</translation>
+        </text>
+        <!-- DO YOUR ACTION MODAL -->
+
+
+        <!-- PLAY AREA  -->
+        <text id='reserved-cards'>
+            <translation lang='fr'>Réservé</translation>
+            <translation lang='en'>Reserved</translation>
+            <translation lang='ru'>Резервный</translation>
+            <translation lang='az'>Rezervlənmiş</translation>
+        </text>
+
+        <text id='out-of-game'>
+            <translation lang='fr'>En dehors</translation>
+            <translation lang='en'>Out</translation>
+            <translation lang='ru'>Вне</translation>
+            <translation lang='az'>Məğlub</translation>
+        </text>
+        <!-- PLAY AREA  -->
+
+
+
+        <!-- START TURN / DO ACTION / SHOW ALL CARDS / CONTINUE / END OF ROUND / CARDS LEFT -->
+        <text id='start-your-turn'>
+            <translation lang='fr'>Commencez votre tour</translation>
+            <translation lang='en'>Start your turn</translation>
+            <translation lang='ru'>Начни свой ход</translation>
+            <translation lang='az'>Növbəni başlat</translation>
+        </text>
+
+        <text id='do-your-action'>
+            <translation lang='fr'>Faites votre action</translation>
+            <translation lang='en'>Do your action</translation>
+            <translation lang='ru'>Делай свое действие</translation>
+            <translation lang='az'>Gedişini elə</translation>
+        </text>
+
+        <text id='show-all-cards'>
+            <translation lang='fr'>Afficher toutes les cartes</translation>
+            <translation lang='en'>Show all cards</translation>
+            <translation lang='ru'>Показать все карты</translation>
+            <translation lang='az'>Kartları göstər</translation>
+        </text>
+
+        <text id='dashboard-continue'>
+            <translation lang='fr'>Continuer</translation>
+            <translation lang='en'>Continue</translation>
+            <translation lang='ru'>Продолжить</translation>
+            <translation lang='az'>Davam etmək</translation>
+        </text>
+
+        <text id='dashboard-start-new-round'>
+            <translation lang='fr'>Commencer un nouveau tour</translation>
+            <translation lang='en'>Start new round</translation>
+            <translation lang='ru'>Начать новый раунд</translation>
+            <translation lang='az'>Yeni raund başlat</translation>
+        </text>
+
+        <text id='end-of-round'>
+            <translation lang='fr'>Fin de manche</translation>
+            <translation lang='en'>End of round</translation>
+            <translation lang='ru'>Конец раунда</translation>
+            <translation lang='az'>Raundun sonu</translation>
+        </text>
+
+        <text id='cards-left'>
+            <translation lang='fr'>Cartes restantes:</translation>
+            <translation lang='en'>Cards left:</translation>
+            <translation lang='ru'>Карты остались:</translation>
+            <translation lang='az'>Kartlar qalıb</translation>
+        </text>
+        <!-- START TURN / DO ACTION / SHOW ALL CARDS / CONTINUE  -->
+
+
+        <!-- START TURN / DO ACTION / SHOW ALL CARDS / CONTINUE  -->
+        <text id='dashboard-played'>  
+            <translation lang='fr'>joué</translation>
+            <translation lang='en'>played</translation>
+            <translation lang='ru'>сыграл</translation>
+            <translation lang='az'>oynadı</translation>
+        </text>
+
+        <text id='dashboard-against'>  
+            <translation lang='fr'>contre</translation>
+            <translation lang='en'>against</translation>
+            <translation lang='ru'>против</translation>
+            <translation lang='az'>qarşı</translation>
+        </text>
+
+        <text id='dashboard-against-you'> <!-- Also in play zone -->
+            <translation lang='fr'>VOUS</translation>
+            <translation lang='en'>YOU</translation>
+            <translation lang='ru'>ВАС</translation>
+            <translation lang='az'>SİZƏ</translation>
+        </text>
+
+         <text id='winner-message'>  
+            <translation lang='fr'>a gagné le tour</translation>
+            <translation lang='en'>won the round</translation>
+            <translation lang='ru'>выиграл раунд</translation>
+            <translation lang='az'>roundu qazandı</translation>
+        </text>
+
+        <text id='guard'>  
+            <translation lang='fr'>Garde</translation>
+            <translation lang='en'>Guard</translation>
+            <translation lang='ru'>Стража</translation>
+            <translation lang='az'>Mühafizəçi</translation>
+        </text>
+        <text id='priest'>  
+            <translation lang='fr'>Prêtre</translation>
+            <translation lang='en'>Priest</translation>
+            <translation lang='ru'>Священник</translation>
+            <translation lang='az'>Kahin</translation>
+        </text>
+        <text id='baron'>  
+            <translation lang='fr'>Baron</translation>
+            <translation lang='en'>Baron</translation>
+            <translation lang='ru'>Барон</translation>
+            <translation lang='az'>Baron</translation>
+        </text>
+        <text id='handmaid'>  
+            <translation lang='fr'>Servante</translation>
+            <translation lang='en'>Handmaid</translation>
+            <translation lang='ru'>Служанка</translation>
+            <translation lang='az'>Xanım</translation>
+        </text>
+        <text id='prince'>  
+            <translation lang='fr'>Prince</translation>
+            <translation lang='en'>Prince</translation>
+            <translation lang='ru'>Принц</translation>
+            <translation lang='az'>Şahzadə</translation>
+        </text>
+        <text id='king'>  
+            <translation lang='fr'>Roi</translation>
+            <translation lang='en'>King</translation>
+            <translation lang='ru'>Король</translation>
+            <translation lang='az'>Kral</translation>
+        </text>
+        <text id='countess'>  
+            <translation lang='fr'>Comtesse</translation>
+            <translation lang='en'>Countess</translation>
+            <translation lang='ru'>Графиня</translation>
+            <translation lang='az'>Qrafinya</translation>
+        </text>
+        <text id='princess'>  
+            <translation lang='fr'>Princesse</translation>
+            <translation lang='en'>Princess</translation>
+            <translation lang='ru'>Принцесса</translation>
+            <translation lang='az'>Şahzadə</translation>
+        </text>
+
+      
+
+        <!-- START TURN / DO ACTION / SHOW ALL CARDS / CONTINUE  -->
+
+    </language>
+</stati18n>

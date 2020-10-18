@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/assets/css/style.css">
+    <link rel="icon" href="src/assets/images/icon.ico" type="image/x-icon" />
+
+    <title class="s18n-title"></title>
+
+    <!-- ========================================== LOCALIZATION -->
+    <link rel="stylesheet" href="src/localize/stati18n.css">
+    <!-- Default language : hightly recommended -->
+    <link rel="stylesheet" href="src/localize/stati18n-en.css">
+    <script src="src/assets/js/jQuery.min.js"></script>
+    <script>
+        $(window).on("load", function(){
+            $('.preloader').delay(3000).fadeOut(1000);
+            // $('.preloader').fadeOut();
+            $('.mainWrapper').show();
+        });
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
+    <script src="src/localize/stati18n.js"></script>
+    <script type="module" src="src/assets/js/script.js"></script>
+    <script type="module" src="src/main.js"></script>
+</head>
+
+<body>
+
+    <div class="preloader"></div>
+
+    <main class="mainWapper">
+        <div class="welcomeModalContainer">
+            <div class="welcomeModal">
+                <div class="learnToPlay stati18n s18n-how-play"></div>
+                <div class="startTheGame stati18n s18n-start-game"></div>
+                <div class="howPlayVideo">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WAiI7G3QdOU" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="afterVideoStart stati18n s18n-start-game"></div>
+            </div>
+            <div class="languageSelection">
+                <img class="activeLanguage stati18n-language-selector" value="en" src="src/assets/images/british.png" alt="Flag Here">
+                <img src="src/assets/images/french.png" class="stati18n-language-selector" value="fr" alt="Flag Here">
+                <img src="src/assets/images/russian.png" class="stati18n-language-selector" value="ru"  alt="Flag Here">
+                <img src="src/assets/images/azerbaijan.png" class="stati18n-language-selector" value="az" alt="Flag Here">
+            </div>
+        </div>
+    
+    
+        <div class="playArea">
+            <div class="reservedCardsContainer">
+                <p class="stati18n s18n-reserved-cards"></p>
+                <div class="reservedCardsIMGContainer">
+                    <!-- DONE MAKE RESERVED CARDS FOR 2 PLAYER DYNAMIC -->
+                    <img src="src/assets/images/back-card.jpg" alt="Image Here">
+                    <img src="src/assets/images/prince.jpg" alt="Image Here">
+                    <img src="src/assets/images/king.jpg" alt="Image Here">
+                    <img src="src/assets/images/guard.jpg" alt="Image Here">
+                </div>
+            </div>
+            <div class="cardsStore">
+                <img src="src/assets/images/back-card.jpg" alt="Image Here">
+                <img src="src/assets/images/back-card.jpg" alt="Image Here">
+                <img src="src/assets/images/back-card.jpg" alt="Image Here">
+                <h1> <span class="stati18n s18n-cards-left"></span>  &nbsp;<span>15</span></h1>
+            </div>
+    
+            <div class="player user-1 aiLeft-container">
+                <div class="discardedCardsContainer">
+                </div>
+                <h1 class="stati18n s18n-user-number-one"></h1>
+                <img src="src/assets/images/back-card.jpg" alt="Image Here">
+            </div>
+            <div class="player user-2 aiTop-container">
+                <div class="discardedCardsContainer">
+                </div>
+                <h1 class="stati18n s18n-user-number-two"></h1>
+                <img src="src/assets/images/back-card.jpg" alt="Image Here">
+            </div>
+            <div class="player user-3 aiRight-container">
+                <div class="discardedCardsContainer">
+                </div>
+                <h1 class="stati18n s18n-user-number-three"></h1>
+                <img src="src/assets/images/back-card.jpg" alt="Image Here">
+            </div>
+            <div class="player user user-container">
+                <div class="discardedCardsContainer">
+                </div>
+                <h1 class="stati18n s18n-user-you"></h1>
+                <img src="src/assets/images/prince.jpg" alt="Image Here">
+            </div>
+        </div>
+    
+    
+    
+        <div class="startYourTurn stati18n s18n-start-your-turn"></div>
+        <div class="doYourAction stati18n s18n-do-your-action"></div>
+    
+    
+        <div class="ShowCardsText stati18n s18n-show-all-cards"></div>
+        <div class="cardsIntroImage">
+            <div class="closeIntroCards"><i class="fal fa-times"></i></div>
+            <div class="imageSelfShowCards"></div>
+        </div>
+    
+    
+    
+        <div class="doYourActionModal">
+            <div class="doYourActionContainer">
+                <div class="doYourActionContainerText stati18n s18n-click-card-to-use"></div>
+                <div class="doYourActionContainerImages">
+                    <img src="src/assets/images/prince.jpg" alt="Image Here">
+                    <img src="src/assets/images/king.jpg" alt="Image Here">
+                </div>
+                <form class="doYourActionSelectAI">
+                    <div class="selectUserText stati18n s18n-select-user-to-affect"></div>
+                    <div class="doYourActionSelectUserContainer">
+                        <select class="usersOrders" id="doYourActionSelectPlayer" required>
+                            <option class="s18n-option-0" value="" selected disabled></option>
+                            <option class="s18n-option-1" value="1"></option>
+                            <option class="s18n-option-2" value="2"></option>
+                            <option class="s18n-option-3" value="3"></option>
+                            <option class="s18n-option-4" value="0" disabled></option>
+                        </select>
+                    </div>
+                    <div class="doYourActionSelectContainer">
+                        <select name="doYourActionSelect" id="doYourActionSelect" required>
+                            <option class="s18n-option-0" value="" selected disabled></option>
+                            <option class="s18n-priest" value="2"></option>
+                            <option class="s18n-baron" value="3"></option>
+                            <option class="s18n-handmaid" value="4"></option>
+                            <option class="s18n-prince" value="5"></option>
+                            <option class="s18n-king" value="6"></option>
+                            <option class="s18n-countess" value="7"></option>
+                            <option class="s18n-princess" value="8"></option>
+                        </select>
+                    </div>
+                    <input class="actionSubmit s18n-input" type="submit" value="Submit">
+                    <div class="doActionGoBack stati18n s18n-go-back-btn"></div>
+                </form>
+            </div>
+        </div>
+    
+    
+    
+        <div class="launchNewGameContainer">
+            <div class="launchNewGameForm">
+                <h2 class="stati18n s18n-create-game"></h2>
+                <div class="newPlayerLuchSelect">
+                    <p class="stati18n s18n-user-number-one"></p>
+                    <p class="stati18n s18n-user-you"></p>
+                </div>
+                <div class="newPlayerLuchSelect">
+                    <p class="stati18n s18n-user-number-two"></p>
+                    <select name="player" id="firstChoice">
+                        <option class="s18n-select-level-computer-easy" value="1"></option>
+                        <option class="s18n-select-level-computer-medium" value="2" disabled></option>
+                    </select>
+                </div>
+                <div class="newPlayerLuchSelect">
+                    <p class="stati18n s18n-user-number-three"></p>
+                    <select name="player" id="secondChoice">
+                        <option class="s18n-select-level-computer-easy" value="1"></option>
+                        <option class="s18n-select-level-computer-medium" value="2" disabled></option>
+                        <option class="s18n-select-level-computer-none" value="3"></option>
+                    </select>
+                </div>
+                <div class="newPlayerLuchSelect">
+                    <p class="stati18n s18n-user-number-four"></p>
+                    <select name="player" id="thirdChoice">
+                        <option class="s18n-select-level-computer-easy" value="1"></option>
+                        <option class="s18n-select-level-computer-medium" value="2" disabled></option>
+                        <option class="s18n-select-level-computer-none" value="3"></option>
+                    </select>
+                </div>
+                <div class="LaunchTheGameBTN stati18n s18n-launch-game"></div>
+            </div>
+        </div>
+    
+    
+    
+        <div class="preloaderAIplay"></div>
+    
+    
+        <div class="dashBoardModal">
+            <div class="dashBoardContainer">
+                <!-- <p><span>You</span><span> affected </span><span>User Two</span></p>
+                <p><span>User Three</span><span> affected </span><span>User One</span></p>
+                <p><span>User One</span><span> affected </span><span>User Two</span></p> -->
+                <div class="dashBoardContinue stati18n s18n-dashboard-continue"></div>
+            </div>
+        </div>
+    
+    
+        <div class="turnNumModal">
+            <div class="turnNumContainer">
+                <h2> <span class="stati18n s18n-end-of-round"> </span> &nbsp; <span>1</span></h2>
+            </div>
+        </div>
+    </main>
+    
+
+    <!-- <script src="src/assets/js/jQuery.min.js"></script> -->
+    <!-- <script type="module" src="src/assets/js/script.js"></script>
+    <script type="module" src="src/main.js"></script> -->
+</body>
+
+</html>
