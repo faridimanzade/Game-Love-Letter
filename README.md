@@ -35,7 +35,7 @@ Send the other suitors packing, gain the advantage and win the game. Let's get s
          ```
     python server.py
          ```
-4. Open up the browser and browse the link **http://localhost:8080/**
+4. Open up the browser ("Chrome" is recomended) and browse the link **http://localhost:8080/**
 5. Enjoy The Game :)
 
 ---
