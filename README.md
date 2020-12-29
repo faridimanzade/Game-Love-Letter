@@ -2,7 +2,7 @@
 
 
 
-## **About This Game**  
+## **About This Game**
 
 DRAW, PLAY AND BLUFF, FOR ONLY ONE SUITOR WILL BE ABLE TO WIN THE HEART OF THE PRINCESS
 
